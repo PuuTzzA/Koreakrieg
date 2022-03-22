@@ -1,0 +1,36 @@
+#preloader{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-background);
+    display: grid;
+    place-content: center;
+    transition: all 0.5s ease-in;
+}
+
+#preloader-gif{
+    width: 50rem;
+    height: auto;
+}
+
+#progress-text{
+    font-family: var(--font-text);
+    font-size: 7rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+#preloader-bg{
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    height: 125%;
+    width: auto;
+
+}
+
+.loaded{
+    transform: translateY(-140%);
+    visibility: hidden;
+}

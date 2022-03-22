@@ -1,0 +1,66 @@
+body{
+    font-size: 50%;
+    width: 100%;
+    background-color: var(--color-background);
+}
+
+/*
+--------------
+----WAVES-----
+--------------
+*/
+
+.waves-container{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
+
+.waves_1 {
+    transform: translate3d(calc(var(--wave-size) * -9rem), calc(var(--wave-size) * 3.5rem), 0);
+}
+
+.waves_2 {
+    transform: translate3d(calc(var(--wave-size) * -6rem), 0, 0);
+}
+
+.container-all{
+    width: 100%;
+    height: 500vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.inhalt{
+    width: 37%;
+    position: absolute;
+    left: 9%;
+    top: 0;
+    padding: 0 5.5rem 5rem;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.main-title{
+    margin: 7rem 0 5rem;
+}
+
+.images{
+    position: fixed;
+    width: 100%;
+}
+
+.full-screen{
+    opacity: 0;
+}
+
+.map1{
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .inhalt{
+        width: 80%;
+    }
+}
+

@@ -1,0 +1,276 @@
+@font-face {
+    font-family: Modern-No-20;
+    src: url("Resources/Fonts/MOD20.TTF");
+}
+
+@font-face {
+    font-family: title-medium;
+    src: url("Resources/Fonts/medium-title.ttf");
+}
+
+@font-face {
+    font-family: title-light;
+    src: url("Resources/Fonts/light-title.ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Resources/Fonts/montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: Noto-Sans-Korean;
+    src: url("Resources/Fonts/NotoSerifKR-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: Black-Han-Sans;
+    src: url("Resources/Fonts/BlackHanSans-Regular.ttf");
+}
+
+:root {
+    --color-background: #030406;
+    --color-title: #ffffff;
+    --color-text: rgb(196, 196, 196);
+    --color-title-dark: rgb(0, 0, 0);
+    --color-text-dark: rgb(10, 10, 10);
+    --color-north-korea: #c60c31;
+    --color-south-korea: #013378;
+
+    --font-title: "Modern-No-20";
+    --font-title-medium: "title-medium";
+    --font-title-light: "title-light";
+    --font-text: "Montserrat";
+    --font-korean-cursive: "Noto-Sans-Korean";
+    --font-korean-bold: "Black-Han-Sans";
+
+    --wave-size: 0.75;
+
+    --distance-1: 15rem;
+    --distance-loc-markers: 1.2rem;
+    --size-loc-markers: 10rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container-16-9 {
+    background-color: var(--color-background);
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+/*
+------------------------
+----TEXT--Allgemein-----
+------------------------
+*/
+
+.title {
+    font-family: var(--font-title-medium);
+    font-size: 9rem;
+    font-weight: 10;
+    color: var(--color-title);
+}
+
+.title-light {
+    color: var(--color-title);
+    font-family: var(--font-title-light);
+    font-size: 1.1em;
+}
+
+.time-stamp {
+    font-family: var(--font-title-medium);
+    font-size: 7rem;
+    font-weight: 10;
+    color: var(--color-title);
+    position: relative;
+}
+
+.time-stamp-light {
+    font-family: var(--font-title-light);
+    font-size: 1.1em;
+}
+
+.time-stamp:before {
+    content: "";
+    background-image: url("Resources/Icons/Time-stamp-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    left: -9rem;
+    top: 4.5rem;
+    transform: translateY(-3.5rem);
+}
+
+.main-text {
+    font-family: var(--font-text);
+    font-size: 2.7rem;
+    line-height: 3.9rem;
+    color: var(--color-text);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.dark {
+    color: var(--color-background);
+}
+
+.location {
+    font-family: var(--font-title-light);
+    font-size: 6rem;
+    color: var(--color-title);
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
+    width: auto;
+    display: inline;
+    position: absolute;
+}
+
+.location-bot::after {
+    content: "";
+    background-image: url("Resources/Icons/Location-pin-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    position: absolute;
+    height: var(--size-loc-markers);
+    width: var(--size-loc-markers);
+    left: 50%;
+    top: calc(100% + var(--distance-loc-markers));
+    transform: translateX(-50%);
+}
+
+.location-top::after {
+    content: "";
+    background-image: url("Resources/Icons/Location-pin-icon-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    position: absolute;
+    height: var(--size-loc-markers);
+    width: var(--size-loc-markers);
+    left: 50%;
+    bottom: calc(100% + var(--distance-loc-markers));
+    transform: translateX(-50%);
+}
+
+.location-left::after {
+    content: "";
+    background-image: url("Resources/Icons/Location-pin-icon-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    position: absolute;
+    height: var(--size-loc-markers);
+    width: var(--size-loc-markers);
+    left: calc(100% + var(--distance-loc-markers));
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.location-right::after {
+    content: "";
+    background-image: url("Resources/Icons/Location-pin-icon-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    position: absolute;
+    height: var(--size-loc-markers);
+    width: var(--size-loc-markers);
+    right: calc(100% + var(--distance-loc-markers));
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*
+------------------
+----Utilities-----
+------------------
+*/
+
+.section {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.full-screen {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/*
+--------------
+----WAVES-----
+--------------
+*/
+
+.waves {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-repeat: repeat;
+    background-size: calc(var(--wave-size) * 6rem) calc(var(--wave-size) * 7rem);
+    background-image: url("Resources/Korea_Map/Background_waves.svg");
+    opacity: 0.1;
+}
+
+.waves_1 {
+    transform: translate3d(calc(var(--wave-size) * -9rem), calc(var(--wave-size) * 3.5rem), 0);
+}
+
+.waves_2 {
+    transform: translateX(calc(var(--wave-size) * -6rem));
+}
+
+/*
+----------------
+----Scrollbar---
+----------------
+*/
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100vh;
+    margin-block: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@supports(scrollbar-color: red blue){
+    *{
+        scrollbar-color: rgba(255,255,255,0.1) rgba(255, 255, 255, 0.35);
+        scrollbar-width: auto;
+    }
+}
+
+body{
+    overflow: overlay;
+}

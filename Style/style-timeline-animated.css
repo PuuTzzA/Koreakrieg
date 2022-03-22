@@ -1,0 +1,630 @@
+body {
+    overflow-x: hidden;
+    background-color: var(--color-background);
+}
+
+.waves-container {
+    width: 100%;
+    height: 300vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+
+.slidecontainer{
+    position: fixed;
+    z-index: 11;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.slidecontainer p{
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 0rem;
+    opacity: 0.5;
+    user-select: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 15rem;
+    height: 0.9rem;
+    border-radius: 100vh;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+/*
+------------------
+----SECTION-1-----
+------------------
+*/
+
+.korea-map-container-1 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: auto;
+}
+
+.korea-geteilt-38bg {
+    -webkit-mask-image: url("Resources/Korea_Map/section_1_teilung_koreas_38_bg/Korea_geteilt_38_BG_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_1_teilung_koreas_38_bg/Korea_geteilt_38_BG_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px;
+    mask-position: 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: left;
+}
+
+.time-stamp-1945,
+.time-stamp-1948 {
+    position: absolute;
+    top: 9rem;
+    left: var(--distance-1);
+    white-space: nowrap;
+}
+
+.besatzungszonen {
+    position: absolute;
+    white-space: nowrap;
+    left: 15rem;
+    top: 56rem;
+}
+
+.demokratische-volksrepublik-korea,
+.republik-korea {
+    position: absolute;
+    left: 15rem;
+    white-space: nowrap;
+}
+
+.demokratische-volksrepublik-korea {
+    top: 37rem;
+}
+
+.republik-korea {
+    top: 73rem;
+}
+
+.demokratische-volksrepublik-korea img {
+    width: 37em;
+}
+
+.republik-korea img {
+    width: 41em;
+}
+
+/*
+------------------
+----SECTION-2-----
+------------------
+*/
+
+.korea-map-container-2 {
+    position: relative;
+}
+
+.timeline-invasion-1950-bg {
+    position: absolute;
+    left: var(--distance-1);
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 38%;
+    height: 100%;
+    padding: 5.5rem;
+}
+
+.jun-25{
+    margin-top: 15rem;
+}
+
+.bis-jun-29 {
+    -webkit-mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jun_29_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jun_29_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.bis-jul-6 {
+    -webkit-mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jul_6_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jul_6_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.bis-jul-21 {
+    -webkit-mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jul_21_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_jul_21_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.bis-aug-20 {
+    -webkit-mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_aug_20_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_aug_20_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.bis-sep-15 {
+    -webkit-mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_sep_15_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_2_first_invasion_juni_september_1950/invasion_bis_sep_15_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.locations {
+    position: absolute;
+}
+
+.location-dongducheon {
+    top: 37.5rem;
+    left: 123rem;
+}
+
+.location-chuncheon {
+    top: 64rem;
+    left: 138rem;
+}
+
+.location-seoul {
+    top: 43rem;
+    left: 133rem;
+}
+
+.location-suwon {
+    top: 64rem;
+    left: 154rem;
+}
+
+.location-daejeon {
+    top: 70rem;
+    left: 145rem;
+}
+
+.location-daejeon::after{
+    left: 7rem;
+}
+
+.location-busan{
+    top: 66rem;
+    left: 138rem;
+}
+
+/*
+-------------------
+----SECTION-UN-----
+-------------------
+*/
+
+.section-UN-intervention{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    overflow: visible;
+    padding-top: 10rem;
+}
+
+.waves-left-un{
+    position: absolute;
+    width: auto;
+    left: -12rem;
+    top: 0;
+}
+
+.US-intervention,
+.UN{
+    position: relative;
+    margin-left: 20rem;
+    margin-top: 0rem;
+    z-index: 1;
+    width: 150rem;
+}
+
+.UN{
+    top: 6rem;
+    width: 100rem;
+}
+
+.Asian-Defense-Perimeter{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-UN-intervention .waves-container{
+    z-index: -10;
+}
+
+/*
+------------------
+----SECTION-3-----
+------------------
+*/
+
+.section-3{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.section-3 .waves-container{
+    z-index: -10;
+}
+
+.korea-map-container-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.timeline-rest-bg {
+    position: absolute;
+    left: var(--distance-1);
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 37%;
+    height: 100%;
+    padding: 5.5rem;
+    z-index: 2;
+}
+
+.timeline-rest-content{
+    padding-top: 15rem;
+}
+
+.bis-sep-20{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_sep_20_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_sep_20_mask.svg");
+}
+
+.bis-sep-24{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_sep_24_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_sep_24_mask.svg");
+}
+
+.bis-okt-1{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_1_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_1_mask.svg");
+}
+
+.bis-okt-7{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_7_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_7_mask.svg");
+}
+
+.bis-okt-19{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_19_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_19_mask.svg");
+}
+
+.bis-okt-25{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_25_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_25_mask.svg");
+}
+
+.bis-okt-31{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_31_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_a_landung_bei_incheon_bis_vor_1_offensive/3a_bis_okt_31_mask.svg");
+}
+
+.map-3-b-start,
+.map-3-c-start,
+.map-3-d-start{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_start_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_start_mask.svg");
+}
+
+.bis-nov-4{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_4_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_4_mask.svg");
+}
+
+.bis-nov-24{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_24_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_24_mask.svg");
+}
+
+.bis-nov-28{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_28_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_b_first_phase_offensive+home_by_christmas_offensive/3b_bis_nov_28_mask.svg");
+}
+
+.bis-jan-12{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_jan_12_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_jan_12_mask.svg");  
+}
+
+.bis-jan-4{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_jan_4_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_jan_4_mask.svg");  
+}
+
+.bis-dez-1{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_1_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_1_mask.svg");  
+}
+
+.bis-dez-5{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_5_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_5_mask.svg");  
+}
+
+.bis-dez-24{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_24_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_c_second_and_third_phase_offensive/3c_bis_dez_24_mask.svg");  
+}
+
+.bis-jun-14{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_jun_14_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_jun_14_mask.svg");
+}
+
+.bis-mrz-14{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_mrz_14_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_mrz_14_mask.svg");
+}
+
+.bis-feb-19{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_feb_19_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_d_UN_May_June_Counteroffensive/3d_bis_feb_19_mask.svg");
+}
+
+.bis-sep-20,
+.bis-sep-24,
+.bis-okt-1,
+.bis-okt-7,
+.bis-okt-19,
+.bis-okt-25,
+.bis-okt-31,
+.map-3-b-start,
+.bis-nov-4,
+.bis-nov-24,
+.bis-nov-28,
+.map-3-c-start,
+.bis-jan-12,
+.bis-jan-4,
+.bis-dez-24,
+.bis-dez-5,
+.bis-dez-1,
+.map-3-d-start,
+.bis-jun-14,
+.bis-mrz-14,
+.bis-feb-19,
+.dmz{
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0px 0px;
+    mask-position: 0px 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.location-seoul-2,
+.location-seoul-3{
+    top: 41rem;
+    left: 121rem;
+}
+
+.location-busan-2{
+    top: 66rem;
+    left: 138rem;
+}
+
+.location-incheon{
+    top: 69rem;
+    left: 117rem;
+}
+
+.location-pjöngjang,
+.location-pjöngjang-2{
+    top: 26rem;
+    left: 105rem;
+}
+
+/*
+------------------
+----SECTION-DMZ---
+------------------
+*/
+
+.section-dmz img{
+    z-index: 10;
+}
+
+.dmz{
+    -webkit-mask-image: url("Resources/Korea_Map/section_3_e_dmz/3e_dmz_mask.svg");
+    mask-image: url("Resources/Korea_Map/section_3_e_dmz/3e_dmz_mask.svg");
+}
+
+.jul-10,
+.okt,
+.verhandlungen-1,
+.verhandlungen-2,
+.verhandlungen-3,
+.verhandlungen-4{
+    position: absolute;
+    white-space: nowrap;
+    z-index: 11;
+}
+
+.dmz-on-top{
+    z-index: 11;
+}
+
+.jul-10,
+.verhandlungen-1,
+.verhandlungen-3{
+    top: 11.5rem;
+    left: 14rem;
+}
+
+.okt{
+    top: 77rem;
+    left: 84rem;
+    text-align: right;
+}
+
+.verhandlungen-2{
+    top: 80rem;
+    left: 79rem;
+    text-align: right;
+}
+
+.verhandlungen-4{
+    top: 70rem;
+    left: 70rem;
+    text-align: right;
+}
+
+
+.dmz-ts::before{
+    background-image: none;
+}
+
+.dmz-p{
+    color: white;
+    font-size: 3rem;
+}
+
+.location-kaesong{
+    top: 54rem;
+    left: 38rem;
+}
+
+.location-panmunjom{
+    top: 68rem;
+    left: 70rem;
+}
+
+
+/*
+------------------
+----SECTION-4-----
+------------------
+*/
+
+.section-4{
+    position: relative;
+}
+
+.infos{
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 11rem;
+}
+
+.info-3{
+    font-size: 7rem;
+}
+
+.info-4{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.info-4 img{
+    width: 9rem;
+    height: auto;
+}
+
+.casualties-img{
+    will-change: auto;
+    overflow: hidden;
+}
+
+.disclaimer{
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.2;
+    text-align: right;
+    line-height: 1.5rem;
+    width: 55%;
+    bottom: 0rem;
+    right: 1rem;
+}
+
+.disclaimer a{
+    color: var(--color-text);
+}
+
+/*
+------------------
+----SECTION-5-----
+------------------
+*/
+
+.section-5{
+    display: grid;
+    place-content: center;
+}
+
+.end{
+    font-family: var(--font-title);
+    color: white;
+    text-align: center;
+    font-size: 10rem;
+}
