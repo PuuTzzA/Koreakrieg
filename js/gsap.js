@@ -805,14 +805,6 @@ function animate_show(object, timeline) {
     document.getElementsByClassName(object)[0].style.width = cal_width + "px";
 
     for (var index = 1; index < 226; index++) {
-
-        let element = document.createElement("img");
-        let new_src = "../Style/Resources/Casualties_visualisation/casualties/" + ("0000000" + index).slice(-4) + ".jpg";
-        element.src = new_src;
-        element.classList.add("full-screen");
-        element.classList.add("img-" + index);
-        document.getElementsByClassName(object)[0].appendChild(element);
-
         if (index != 1) {
             if (index == 155) {
                 timeline.from("." + "img-" + index, {
