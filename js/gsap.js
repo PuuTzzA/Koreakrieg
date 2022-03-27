@@ -2,7 +2,11 @@ let color_background = getComputedStyle(document.body).getPropertyValue("--color
 let color_north_korea = getComputedStyle(document.body).getPropertyValue("--color-north-korea");
 document.getElementById("container-16-9").style.backgroundColor = color_background;
 
+document.getElementById("verdeckung-unten").style.height = String(height - cal_height) + "px";
+document.getElementById("section-buffer").style.height = String(height - cal_height) + "px";
+
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 let waves_tl = gsap.timeline({ repeat: -1, yoyo: true });
 waves_tl.to(".waves_1", { duration: 4, x: String(window.getComputedStyle(document.body).getPropertyValue("--wave-size") * -3) + "rem", ease: "sine.inOut" })
@@ -12,13 +16,6 @@ ScrollTrigger.defaults({
     markers: false,
     snap: false,
 })
-
-//var slider = document.getElementById("myRange");
-//slider.oninput = function() {
-//    var new_duration = (100 - this.value) * (1.5/100) + 0.5;
-//    console.log(new_duration);
-//    duration_value = new_duration;
-//}
 
 let scrub_value = 1;
 let duration_value = 1;
@@ -79,25 +76,25 @@ function Remove_elements_right(element, offset) {
     let temp = gsap.timeline();
 
     temp
-    .to(element, {
-        transformOrigin: "top left",
-        scaleX: 2,
-        letterSpacing: "5rem",
-        duration: 2,
-        ease: "sine.inOut"
-    })
-    .to(element, {
-        x: offset,
-        duration: 3,
-        ease: "sine.inOut",
-    }, "-=2")
-    .to(element, {
-        transformOrigin: "top left",
-        scaleX: 1,
-        letterSpacing: "auto",
-        duration: 2,
-        ease: "sine.inOut"
-    }, "-=1")
+        .to(element, {
+            transformOrigin: "top left",
+            scaleX: 2,
+            letterSpacing: "5rem",
+            duration: 2,
+            ease: "sine.inOut"
+        })
+        .to(element, {
+            x: offset,
+            duration: 3,
+            ease: "sine.inOut",
+        }, "-=2")
+        .to(element, {
+            transformOrigin: "top left",
+            scaleX: 1,
+            letterSpacing: "auto",
+            duration: 2,
+            ease: "sine.inOut"
+        }, "-=1")
 
     return temp;
 }
@@ -144,11 +141,6 @@ let section1_tl = gsap.timeline({
 })
 
 section1_tl
-    .to("#container-16-9", {
-        immediateRender: false,
-        backgroundColor: color_background,
-        duration: 0,
-    })
     .add(Remove_elements_left(".main-title", false))
     .to(".korea-map-container-1", {
         scale: 2,
@@ -204,13 +196,9 @@ section1_tl
         duration: 5,
         ease: "sine.in",
     }, "-=5")
-    .fromTo("#container-16-9", {
-        backgroundColor: color_background,
-    },{
-        immediateRender: false,
-        backgroundColor: color_north_korea,
+    .from(".red-background", {
+        autoAlpha: 0,
         duration: 3,
-        ease: "sine.in",
     }, "-=3")
     .to(".waves-1", {
         autoAlpha: 0,
@@ -291,11 +279,10 @@ section2_tl
         duration: 3,
         ease: "sine.inOut",
     })
-    .to("#container-16-9", {
-        immediateRender: false,
-        backgroundColor: color_background,
+    .from(".timeline-invasion-1950-bg", {
+        autoAlpha: 0,
         duration: 0.5,
-    }, "<")
+    }, "-=0.5")
     .to(".korea-map-container-2", {
         scale: 2,
         x: "-25rem",
@@ -441,11 +428,6 @@ section2_tl
         duration: 1,
         ease: "sine.out",
     })
-    .to("#container-16-9", {
-        immediateRender: false,
-        backgroundColor: color_background,
-        duration: 0,
-    })
 
 document.getElementsByClassName("waves-left-un")[0].style.height = cal_height + "px";
 // 1 rem = cal_height * (10 / 1080)
@@ -457,7 +439,8 @@ let section3_tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".section-3",
         start: "top top",
-        end: "+=" + duration_value * 25000,
+        end: "+=" + duration_value * 35000,
+        //end: "100%",
         scrub: scrub_value,
         pin: true,
         id: "section-2",
@@ -710,7 +693,7 @@ section3_tl
         maskPosition: "0rem 15rem",
         duration: 4,
     }, "-=3")
-    .from(".section-dmz",{
+    .from(".section-dmz", {
         autoAlpha: 0,
         duration: 0,
     })
@@ -734,24 +717,24 @@ section3_tl
         duration: 4,
         ease: "sine.inOut"
     }, "-=5")
-    .add(Get_elements_right(".jul-10", 35000 * width_factor))
+    .add(Get_elements_right(".jul-10", 38000 * width_factor))
     .add(Appear_elastic(".location-kaesong"), "-=1.5")
-    .add(Get_elements_right(".okt", -2000 * width_factor))
+    .add(Get_elements_right(".okt", -25000 * width_factor))
     .add(Appear_elastic(".location-panmunjom"), "-=1.5")
     .add(Remove_elements_left(".jul-10", true), "+=1")
-    .add(Get_elements_right(".verhandlungen-1", 40000 * width_factor), "-=3")
-    .add(Remove_elements_right(".okt", -12000 * width_factor), "+=1")
-    .add(Get_elements_right(".verhandlungen-2", -3000 * width_factor), "-=4")
+    .add(Get_elements_right(".verhandlungen-1", 42000 * width_factor), "-=3")
+    .add(Remove_elements_right(".okt", -8000 * width_factor), "+=1")
+    .add(Get_elements_right(".verhandlungen-2", -30000 * width_factor), "-=4")
     .add(Remove_elements_left(".verhandlungen-1", true), "+=1")
     .add(Get_elements_right(".verhandlungen-3", 45000 * width_factor), "-=3")
     .add(Remove_elements_right(".verhandlungen-2", -12000), "+=1")
-    .add(Get_elements_right(".verhandlungen-4", -3000), "-=4")
-    .from(".dmz",{
+    .add(Get_elements_right(".verhandlungen-4", -40000), "-=4")
+    .from(".dmz", {
         maskPosition: -cal_width,
         duration: 5,
     }, "-=3")
     .add(Dissapear_elastic(".location-kaesong"), "-=5")
-    .add(Dissapear_elastic(".location-panmunjom"),"-=4")
+    .add(Dissapear_elastic(".location-panmunjom"), "-=4")
     .to(".dmz-sk", {
         y: cal_height,
         scale: 2,
@@ -769,32 +752,31 @@ section3_tl
         duration: 2,
     }, "-=4")
     .to(".dmz-nk", {
-        y: -cal_height*1.2,
+        y: -cal_height * 1.2,
         scale: 2,
         duration: 4,
         ease: "sine.in",
     }, "-=4")
     .to(".verhandlungen-3", {
-        y: -cal_height*2,
+        y: -cal_height * 2,
         x: "-100rem",
         duration: 4,
         ease: "sine.in",
     }, "-=4")
     .to(".verhandlungen-4", {
-        y: cal_height*2,
+        y: cal_height * 2,
         x: "100rem",
         duration: 4,
         ease: "sine.in",
     }, "-=4")
-    .to(".dmz",{
+    .to(".dmz", {
         autoAlpha: 0,
         duration: 1,
     })
-    .to("#container-16-9", {
-        immediateRender: false,
-        backgroundColor: color_background,
-        duration: 0,
-    })
+    .to(".timeline-rest-bg", {
+        autoAlpha: 0,
+        duration: 1,
+    }, "-=1")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Section 4 casualties
@@ -823,7 +805,7 @@ let section4_tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".section-4",
         start: "top top",
-        end: "+=" + duration_value * 8000,
+        end: "+=" + duration_value * 12000,
         scrub: scrub_value,
         pin: true,
         id: "casualties",
@@ -837,11 +819,11 @@ infos.forEach((element, index) => {
     temp
         .from(element, {
             autoAlpha: 0,
-            duration: 30,
-        })
+            duration: 100,
+        }, "+=30")
         .to(element, {
             autoAlpha: 0,
-            duration: 30,
+            duration: 50,
         }, "+=30")
     section4_tl.add(temp);
 })
@@ -851,18 +833,68 @@ section4_tl
         autoAlpha: 0,
         duration: 30,
     })
+    .from(".disclaimer", {
+        autoAlpha: 0,
+        duration: 30,
+    }, "-=30")
 animate_show("casualties-img", section4_tl);
 section4_tl
     .to(".section-4", {
         autoAlpha: 0,
-        duration: 30,
-    }, "+=15")
+        duration: 50,
+    }, "+=30")
     .to(".section-4", {
         autoAlpha: 0,
-        duration: 10,
+        duration: 50,
     })
-    .to("#container-16-9", {
-        immediateRender: false,
-        backgroundColor: color_background,
-        duration: 0,
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Milestones 
+
+
+let milestones = [];
+document.querySelectorAll(".mile-stone").forEach((element) => {
+    milestones.push(element);
+    var sollPos = element.getAttribute("offset");
+    element.style.top = String(cal_height * parseFloat(sollPos) - element.offsetHeight / 2) + "px";
+    console.log(String(cal_height * parseFloat(sollPos) - element.offsetHeight / 2) + "px")
+})
+
+milestones.forEach((e)=>{
+    e.childNodes[1].addEventListener("click", (element) =>{
+        console.log(element.path[0].parentElement.parentElement.getAttribute("offset"))
+
+        var sollPos = element.path[0].parentElement.parentElement.getAttribute("offset");
+        var totalHeight = document.getElementById("container-16-9").offsetHeight;
+
+        var offset = totalHeight * sollPos;
+
+        if(offset != 0){
+            TweenMax.to(window, 2, { scrollTo: { y: offset, ease: "power4.inOut" } });
+        }
     })
+})
+
+function progress() {
+    window.requestAnimationFrame(progress);
+
+    var totalHeight = document.getElementById("container-16-9").scrollHeight;
+    var aktPos = window.pageYOffset;
+
+    milestones.forEach((element) => {
+        var sollPos = element.getAttribute("offset");
+        var iconNormal = element.childNodes[1].childNodes[1];
+        var iconPassed = element.childNodes[1].childNodes[5];
+
+        if (totalHeight * sollPos < aktPos + 1) {
+            iconNormal.classList.add("mile-stone-passed-js");
+            iconPassed.classList.add("mile-stone-passed-js-2");
+        } else {
+            iconNormal.classList.remove("mile-stone-passed-js");
+            iconPassed.classList.remove("mile-stone-passed-js-2");
+        }
+    })
+}
+
+progress();

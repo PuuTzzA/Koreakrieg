@@ -58,7 +58,6 @@ setInterval(function () {
     for (var index = 1; index < 226; index++) {
       var element = document.getElementsByClassName("img-" + (index))[0];
       if(element.complete){
-        console.log(index);
         document.getElementById("progress-text").innerHTML = Math.floor(index*100/225) +"%";
       }
     }
