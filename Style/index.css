@@ -2,3 +2,143 @@ body{
     background-color: var(--color-background);
 }
 
+#canvas{
+    position: absolute;
+    z-index: -1;
+}
+
+.content-container-outer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#waves-container{
+    position: absolute;
+    width: 120%;
+    height: 120vh;
+    margin-top: -10vh;
+    margin-left: -10%;
+    z-index: -10;
+}
+
+#content-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-title{
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.links-container{
+    top: 0;
+    width: max-content;
+    height: 80vh;
+    display: grid;
+    padding: 5rem;
+    padding-left: 12rem;
+}
+
+.about-container{
+    width: 100%;
+    height: 80vh;    	
+    text-align: right;
+    padding: 5rem;
+    padding-right: 12rem;
+}
+
+.link{
+    transition: margin-left 0.3s;
+}
+
+.link-title,
+.about-title{
+    font-family: var(--font-title-light);
+    font-size: 5.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.link-text,
+.about-text{
+    font-family: var(--font-text);
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-top: 3rem;
+    transition: margin-left 0.3s;
+}
+
+.link:hover{
+    margin-left: 5rem;
+}
+
+.link:hover .link-text{
+    margin-left: 2rem
+}
+
+.about-container a{
+    color: var(--color-text);
+    text-decoration: none;
+    line-height: 3.9rem;
+    transition: margin-right 0.3s;
+}
+
+.about-container a:hover{
+    margin-right: 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+    html{
+        font-size: 40% !important;
+    }
+
+    .content-container-outer{
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    #content-container{
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .links-container{
+        width: 100%;
+        height: max-content;
+        padding: 10rem;
+        grid-column: span 2;
+        padding-bottom: 5rem;
+    }
+
+    .about-container{
+        width: 100%;
+        height: max-content;
+        padding: 10rem;
+        padding-top: 0;
+        grid-column: span 2;
+        text-align: left;
+    }
+
+    .link-title br{
+        display: none;
+    }
+
+    .link-text br{
+        display: none;
+    }
+
+    .link{
+        margin-bottom: 5rem;
+    }
+
+}
+

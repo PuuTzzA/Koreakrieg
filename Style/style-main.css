@@ -245,8 +245,8 @@
 */
 
 ::-webkit-scrollbar {
-    width: 1rem;
-    height: 1rem;
+    width: 0.9rem;
+    height: 0.9rem;
 }
 
 ::-webkit-scrollbar-track{
@@ -256,7 +256,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 100vw;
 }
 
@@ -273,4 +273,58 @@
 
 body{
     overflow: overlay;
+}
+
+/*
+------------------
+----HOME-BUTTON---
+------------------
+*/
+
+.home-button-container{
+    position: fixed;
+    z-index: 110;
+    top: 2rem;
+    left: 1.5rem;
+    width: 8rem;
+    display: grid;
+    place-content: center;
+}
+
+.home-button,
+.home-button-hover{
+    grid-row: 1/1;
+    grid-column: 1/1;
+    width: 8rem;
+}
+
+.home-button-hover{
+    opacity: 0.4;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.home-button{
+    opacity: 0.4;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-mask-image: url("Resources/Icons/home_mask.svg");
+    mask-image: url("Resources/Icons/home_mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: -8rem 0px;
+    mask-position: -8rem 0px;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+}
+
+.home-button:hover{
+    opacity: 1;
+    -webkit-mask-position: 8rem 0px;
+    mask-position: 8rem 0px;
+}
+
+.home-button:hover + .home-button-hover{
+    opacity: 0.7;
 }

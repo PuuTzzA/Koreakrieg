@@ -3,6 +3,15 @@ body {
     background-color: var(--color-background);
 }
 
+#verdeckung-unten{
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-background);
+    bottom: 0;
+}
+
 .waves-container {
     width: 100%;
     height: 300vh;
@@ -11,53 +20,116 @@ body {
     top: 0px;
 }
 
-.slidecontainer{
-    position: fixed;
-    z-index: 11;
-    bottom: 1rem;
-    left: 1rem;
+@media all and (display-mode: fullscreen) {
+    ::-webkit-scrollbar {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    
 }
 
-.slidecontainer p{
-    font-size: 1.7rem;
-    text-align: center;
-    margin-bottom: 0rem;
-    opacity: 0.5;
+/*
+------------------
+----MILE-STONES---
+------------------
+*/
+
+.mile-stones-container{
+    position: fixed;
+    right: -6rem;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.mile-stone{
+    position: absolute;
+    width: max-content;
+    right: 5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.mile-stone-icon{
+    height: 8rem;
+    width: 8rem;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.mile-stone-icon-normal,
+.mile-stone-icon-hover,
+.mile-stone-icon-passed{
+    grid-row: 1/1;
+    grid-column: 1/1;
+    align-self: center;
+    height: 4.5rem;
+    margin: auto;
+}
+
+.mile-stone p{
+    opacity: 0;
+    grid-row-start: 1;
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: all 0.5s;
     user-select: none;
 }
 
-.slider {
-    -webkit-appearance: none;
-    width: 15rem;
-    height: 0.9rem;
-    border-radius: 100vh;
-    background: rgba(255,255,255,0.1);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+.mile-stone-icon-normal{
+    opacity: 0.4;
 }
 
-.slider:hover {
+.mile-stone-icon-normal,
+.mile-stone-icon-passed{
+    transition: all 0.3s;
+}
+
+.mile-stone-icon-hover,
+.mile-stone-icon-passed{
+    opacity: 0;
+}
+
+.mile-stone-icon-hover{
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.4s;
+}
+
+.mile-stone-icon:hover + p{
     opacity: 1;
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.35);
-    cursor: pointer;
+.mile-stone-icon:hover .mile-stone-icon-normal{
+    transform: rotate(45deg);
+    opacity: 0;
+    width: 6.7rem;
+    height: 6.7rem;
 }
 
-.slider::-moz-range-thumb {
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.35);
-    cursor: pointer;
+.mile-stone-icon:hover .mile-stone-icon-passed{
+    opacity: 0.8;
+    width: 6.7rem;
+    height: 6.7rem;
+}
+
+.mile-stone-icon:hover .mile-stone-icon-hover{
+    opacity: 0;
+    width: 8rem;
+    height: 8rem;
+}
+
+.mile-stone-passed-js{
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.mile-stone-passed-js-2{
+    opacity: 0.4;
 }
 
 /*
@@ -66,11 +138,24 @@ body {
 ------------------
 */
 
+
 .korea-map-container-1 {
     position: absolute;
     top: 0%;
     width: 100%;
     height: auto;
+}
+
+.red-background {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    z-index: -10;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .korea-geteilt-38bg {
@@ -516,21 +601,11 @@ body {
     left: 14rem;
 }
 
-.okt{
-    top: 77rem;
-    left: 84rem;
-    text-align: right;
-}
-
-.verhandlungen-2{
-    top: 80rem;
-    left: 79rem;
-    text-align: right;
-}
-
+.okt,
+.verhandlungen-2,
 .verhandlungen-4{
-    top: 70rem;
-    left: 70rem;
+    bottom: 9rem;
+    right: 14rem;
     text-align: right;
 }
 
