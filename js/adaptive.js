@@ -31,8 +31,8 @@ let width_factor = cal_width / 1920;
 document.getElementsByTagName("html")[0].style.fontSize = String(cal_height * (10 / 1080)) + "px";
 
 window.onresize = () =>{
-    if(window.innerHeight > height * 1.1 || window.innerHeight < height * 0.9 ||
-        window.innerWidth > width *1.1 || window.innerWidth < width *0.9){
+    if(window.innerHeight > height * 1.2 || window.innerHeight < height * 0.8 ||
+        window.innerWidth > width *1.2 || window.innerWidth < width *0.8){
             location.reload(); 
     }
 }
