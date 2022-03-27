@@ -70,7 +70,7 @@ body{
     }
 }
 
-@media all and (display-mode: fullscreen) {
+@media all and (display-mode: fullscreen) and (min-width: 700px) {
     .images{
         position: fixed;
         width: 100%;
