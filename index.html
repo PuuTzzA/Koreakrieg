@@ -12,12 +12,78 @@
 </head>
 
 <body>
-    <p class="main-text">Startseite wird noch verbessert :)</p>
-    <a class="main-text" href="timeline-animated.html">Animierter Zeitstrahl</a>
-    <p></p>
-    <a class="main-text" href="timeline.html">Zeitstrahl</a>
-    <p></p>
-    <a class="main-text" href="auf-einen-blick.html">Der Koreakrieg auf einen Blick</a>
+    <div id="container-16-9"></div>
+
+    <canvas id="canvas"></canvas>
+    <canvas id="hidden-canvas" style="display: none;"></canvas>
+
+    <div class="content-container-outer">
+        <div id="waves-container">
+            <div class="waves waves_1"></div>
+            <div class="waves waves_2"></div>
+        </div>
+
+        <div id="content-container">
+
+            <div class="main-title">
+                <p class="title">Der <i class="title-light">Korea</i> Krieg</p>
+            </div>
+
+            <div class="links-container">
+                <div class="link">
+                    <a class="link-title" href="timeline-animated.html">Animierter Zeitstrahl</a>
+                    <p class="link-text">Ein interaktives Lernerlebnis. <br> Nicht für Mobilfunktelefone konzipiert.</p>
+                </div>
+
+                <div class="link">
+                    <a class="link-title" href="auf-einen-blick.html">Der Koreakrieg auf <br> einen Blick</a>
+                    <p class="link-text">Die wichtigsten Grunddaten zusammengefasst <br> an einem Ort</p>
+                </div>
+
+                <div class="link">
+                    <a class="link-title" href="timeline.html">Zeitstrahl</a>
+                    <p class="link-text">Zeitlicher Ablauf des Koreakrieges.</p>
+                </div>
+            </div>
+
+            <div class="about-container">
+                <p class="about-title">Über diese Website:</p>
+                <p class="about-text">Diese Website versucht den Koreakrieg einfach <br> und unterhaltsam zu vermitteln.
+                    <br>
+                    <br>
+                    Quellen:
+                    <br>
+                    <br>
+                    <a href="https://en.wikipedia.org/wiki/Korean_War"
+                        target="_blank">https://en.wikipedia.org/wiki/Korean_War</a>
+                    <br>
+                    <a href="https://de.wikipedia.org/wiki/Koreakrieg"
+                        target="_blank">https://de.wikipedia.org/wiki/Koreakrieg</a>
+                    <br>
+                    <a href="https://www.britannica.com/event/Korean-War"
+                        target="blank">https://www.britannica.com/event/Korean-War</a>
+                    <br>
+                    <a href="https://youtu.be/fBeiD6kGugE"
+                        target="blank">The Korean War: Every Day</a>
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <img id="text" src="Style/Resources/miscellaneous/home_screen/home_screen_text.svg" alt="text">
+        <img id="text-stroke" src="Style/Resources/miscellaneous/home_screen/home_screen_text_stroke.svg"
+            alt="text stroke">
+        <img id="map" src="Style/Resources/miscellaneous/home_screen/home_screen_map.svg" alt="map">
+        <img id="mask" src="Style/Resources/miscellaneous/home_screen/home_screen_korea_mask.svg" alt="mask">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script src="js/adaptive.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
