@@ -328,3 +328,34 @@ body{
 .home-button:hover + .home-button-hover{
     opacity: 0.7;
 }
+
+@media only screen and (max-width: 700px) {
+    .home-button-container{
+        position: fixed;
+        z-index: 110;
+        top: 2rem;
+        left: 1.5rem;
+        width: 12rem;
+        display: grid;
+        place-content: center;
+    }
+    
+    .home-button,
+    .home-button-hover{
+        grid-row: 1/1;
+        grid-column: 1/1;
+        width: 12rem;
+    }
+    
+    .home-button{
+        -webkit-mask-position: -12rem 0px;
+        mask-position: -12rem 0px;
+    }
+
+    .home-button:hover{
+        opacity: 1;
+        -webkit-mask-position: 12rem 0px;
+        mask-position: 12rem 0px;
+    }
+    
+}

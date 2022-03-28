@@ -53,7 +53,7 @@ h1{
     padding: 1rem;
 }
 
-img{
+.img{
     width: 100%;
     height: auto;
 }
@@ -90,7 +90,7 @@ img{
         margin-top: 7rem;
     }
 
-    img{
+    .img{
         width:  225%!important;
         padding-bottom: 0;
     }
@@ -107,35 +107,6 @@ img{
 
     .disclaimer{
         display: none;
-    }
-
-    .home-button-container{
-        width: 12px;
-        height: 8px;
-        top: 15px;
-        left: 10px;
-    }
-    
-    .home-button,
-    .home-button-hover{
-        grid-row: 1/1;
-        grid-column: 1/1;
-        width: 10px;
-    }
-    
-    .home-button{
-        -webkit-mask-position: -10pxm 0px;
-        mask-position: -10px 0px;
-    }
-    
-    .home-button:hover{
-        opacity: 1;
-        -webkit-mask-position: 10px 0px;
-        mask-position: 10px 0px;
-    }
-    
-    .home-button:hover + .home-button-hover{
-        opacity: 0.7;
     }
 
 }
