@@ -18,15 +18,6 @@ function myFunction(x) {
     if (x.matches) { // If media query matches
         console.log("small device");
 
-        document.getElementsByTagName("html")[0].style.fontSize = "40%";
-
-        maps.forEach((element, index) => {
-            gsap.set(element, {
-                autoAlpha: 0,
-            })
-        });
-
-
     } else {
         console.log("big device");
 

@@ -56,7 +56,7 @@ window.addEventListener("resize", function (e) {
 let text = {
     x: 0,
     y: 0,
-    factor: 0.13,
+    factor: 0.15,
 }
 
 let content = {
@@ -128,7 +128,7 @@ function drawImgs(){
     hiddenContext.save();
     hiddenContext.clearRect(0, 0, canvas.width, canvas.height);
 
-    hiddenContext.globalAlpha = 0.825;
+    hiddenContext.globalAlpha = 0.85;
 
     hiddenContext.drawImage(imgText, (innerWidth-imgSizeX)/2 + text.x, (innerHeight-imgSizeY)/2 + text.y, imgSizeX,  imgSizeY)
     hiddenContext.globalCompositeOperation = "source-in";
