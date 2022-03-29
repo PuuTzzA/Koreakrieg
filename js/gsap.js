@@ -714,9 +714,12 @@ section3_tl
     }, "-=4")
     .to(".timeline-rest-content", {
         y: "-900rem",
-        duration: 4,
+        duration: 6,
         ease: "sine.inOut"
-    }, "-=5")
+    }, "-=5")    .to(".timeline-rest-bg", {
+        autoAlpha: 0,
+        duration: 1,
+    }, "-=1")
     .add(Get_elements_right(".jul-10", 38000 * width_factor))
     .add(Appear_elastic(".location-kaesong"), "-=1.5")
     .add(Get_elements_right(".okt", -25000 * width_factor))
@@ -724,11 +727,11 @@ section3_tl
     .add(Remove_elements_left(".jul-10", true), "+=1")
     .add(Get_elements_right(".verhandlungen-1", 42000 * width_factor), "-=3")
     .add(Remove_elements_right(".okt", -8000 * width_factor), "+=1")
-    .add(Get_elements_right(".verhandlungen-2", -30000 * width_factor), "-=4")
+    .add(Get_elements_right(".verhandlungen-2", -25000 * width_factor), "-=4")
     .add(Remove_elements_left(".verhandlungen-1", true), "+=1")
     .add(Get_elements_right(".verhandlungen-3", 45000 * width_factor), "-=3")
-    .add(Remove_elements_right(".verhandlungen-2", -12000), "+=1")
-    .add(Get_elements_right(".verhandlungen-4", -40000), "-=4")
+    .add(Remove_elements_right(".verhandlungen-2", -7000), "+=1")
+    .add(Get_elements_right(".verhandlungen-4", -18000), "-=4")
     .from(".dmz", {
         maskPosition: -cal_width,
         duration: 5,
