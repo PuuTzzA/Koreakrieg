@@ -108,6 +108,7 @@ body{
 
     #content-container{
         width: 100%;
+        overflow-x: hidden;
         overflow-y: scroll;
     }
 
