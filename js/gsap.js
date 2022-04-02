@@ -716,7 +716,8 @@ section3_tl
         y: "-900rem",
         duration: 6,
         ease: "sine.inOut"
-    }, "-=5")    .to(".timeline-rest-bg", {
+    }, "-=5")    
+    .to(".timeline-rest-bg", {
         autoAlpha: 0,
         duration: 1,
     }, "-=1")
@@ -727,11 +728,11 @@ section3_tl
     .add(Remove_elements_left(".jul-10", true), "+=1")
     .add(Get_elements_right(".verhandlungen-1", 42000 * width_factor), "-=3")
     .add(Remove_elements_right(".okt", -8000 * width_factor), "+=1")
-    .add(Get_elements_right(".verhandlungen-2", -25000 * width_factor), "-=4")
+    .add(Get_elements_right(".verhandlungen-2", -28000 * width_factor), "-=4")
     .add(Remove_elements_left(".verhandlungen-1", true), "+=1")
     .add(Get_elements_right(".verhandlungen-3", 45000 * width_factor), "-=3")
-    .add(Remove_elements_right(".verhandlungen-2", -7000), "+=1")
-    .add(Get_elements_right(".verhandlungen-4", -18000), "-=4")
+    .add(Remove_elements_right(".verhandlungen-2", -7000 * width_factor), "+=1")
+    .add(Get_elements_right(".verhandlungen-4", -29000 * width_factor), "-=4")
     .from(".dmz", {
         maskPosition: -cal_width,
         duration: 5,
@@ -822,11 +823,11 @@ infos.forEach((element, index) => {
     temp
         .from(element, {
             autoAlpha: 0,
-            duration: 100,
+            duration: 75,
         }, "+=30")
         .to(element, {
             autoAlpha: 0,
-            duration: 50,
+            duration: 25,
         }, "+=30")
     section4_tl.add(temp);
 })
