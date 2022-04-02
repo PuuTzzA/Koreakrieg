@@ -2,12 +2,24 @@
 
 Bei diesem Projekt handelt es sich um ein persönliches Projekt, bei dem eine statische Webseite zum Thema Koreakrieg erstellt wurde. 
 
-Diese Website wird mithilfe [Github Pages](https://puutzza.github.io/Koreakrieg) gehostet.
+[Die Website](https://puutzza.github.io/Koreakrieg) wird mithilfe von GitHub Pages gehostet.
 
 ## Projektstruktur
 
-* Alle Javascript files befinden sich im Ordner /js
-* Alle css files befinden sich im Ordner /Style
+* JavaScript-Files befinden sich im Ordner /js
+* css-Files befinden sich im Ordner /Style
 * Bilder, Grafiken, Fonts, ... befinden sich im Ordner /Style/Resources
 
+## Anderes
+
+Alle Grafiken, die hier enthalten sind wurden von mir und für diese Website nach Maß angefertigt. 
+
+Die zur Erstellung der Website verwendeten Werkzeuge:
+
+* die [gsap Animation Bibliothek](https://greensock.com/gsap/) für den animierten Teil der Website
+* [Blender](https://www.blender.org/) für die Visualisierung der Todesopfer
+* [Inkscape](https://inkscape.org/) für sämtliche svg Grafiken
+
 <sup> moin krischtoph </sup>
+
+
