@@ -12,7 +12,7 @@ Bei diesem Projekt handelt es sich um ein persönliches Projekt, bei dem eine st
 
 ## Anderes
 
-Alle Grafiken, die hier enthalten sind wurden von mir und für diese Website nach Maß angefertigt. 
+Alle hier enthaltenen Bilder und Grafiken wurden nach Maß für diese Website angefertigt. 
 
 Die zur Erstellung der Website verwendeten Werkzeuge:
 
