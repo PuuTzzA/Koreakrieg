@@ -35,8 +35,8 @@ window.onresize = () => {
         console.log("small device");
 
     } else {
-        if (window.innerHeight > height * 1.1 || window.innerHeight < height * 0.9 ||
-            window.innerWidth > width * 1.1 || window.innerWidth < width * 0.9) {
+        if (window.innerHeight > height * 2 || window.innerHeight < height * 0.5 ||
+            window.innerWidth > width * 2 || window.innerWidth < width * 0.5) {
             location.reload();
         }
     }
