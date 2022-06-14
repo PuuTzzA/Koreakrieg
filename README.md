@@ -19,7 +19,3 @@ Die zur Erstellung der Website verwendeten Werkzeuge:
 * die [gsap Animation Bibliothek](https://greensock.com/gsap/) für den animierten Teil der Website
 * [Blender](https://www.blender.org/) für die Visualisierung der Todesopfer
 * [Inkscape](https://inkscape.org/) für sämtliche svg Grafiken
-
-<sup> moin krischtoph </sup>
-
-
