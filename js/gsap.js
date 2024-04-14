@@ -867,9 +867,9 @@ document.querySelectorAll(".mile-stone").forEach((element) => {
 
 milestones.forEach((e)=>{
     e.childNodes[1].addEventListener("click", (element) =>{
-        console.log(element.path[0].parentElement.parentElement.getAttribute("offset"))
+        console.log(element.target.parentElement.parentElement.getAttribute("offset"))
 
-        var sollPos = element.path[0].parentElement.parentElement.getAttribute("offset");
+        var sollPos = element.target.parentElement.parentElement.getAttribute("offset");
         var totalHeight = document.getElementById("container-16-9").offsetHeight;
 
         var offset = totalHeight * sollPos;
